@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christmas Special</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: #121212;
+            color: #ffffff;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            color: #ff5555;
+            margin-top: 20px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 5px rgba(255, 85, 85, 0.8);
+        }
+        video {
+            margin-top: 20px;
+            max-width: 90%;
+            border: 5px solid #ff5555;
+            box-shadow: 0 0 15px rgba(255, 85, 85, 0.5);
+            border-radius: 10px;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <script>
+        const today = new Date();
+        const isChristmas = (today.getMonth() === 11 && (today.getDate() === 24 || today.getDate() === 25));
+
+        if (isChristmas) {
+            document.body.innerHTML = `
+                <h1>MERRY CHRISTMAS</h1>
+                <video controls autoplay>
+                    <source src="ronaldoxmas.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            `;
+        } else {
+            document.body.innerHTML = `<h1>Wait for Christmas Siuuuuuuu</h1>`;
+        }
+    </script>
+</body>
+</html>
